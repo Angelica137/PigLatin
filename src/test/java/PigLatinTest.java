@@ -1,6 +1,7 @@
-import static org.assertj.core.api.Assertions.assertThat;
+
+//import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
+//import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -16,5 +17,10 @@ public class PigLatinTest {
 	@Test
 	public void testPigLatinReturnsString() {
 		assertEquals("Hello", pig.translate("Hello"));
+	}
+
+	@Test
+	public void testWordStartsWithVowelEndsAy() {
+		assertEquals("earay", pig.translate("ear"));
 	}
 }
