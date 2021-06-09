@@ -6,6 +6,8 @@ public class PigLatin {
 			return (word + "ay");
 		} else if (start == 'x' && start2 == 'r') {
 			return (word + "ay");
+		} else if (start == 'y' && start2 == 't') {
+			return (word + "ay");
 		}
 		return word;
 	}

@@ -28,4 +28,9 @@ public class PigLatinTest {
 	public void testWordStartsWithXrYtEndsAy() {
 		assertEquals("xrayay", pig.translate("xray"));
 	}
+
+	@Test
+	public void testWordStartsWithYtEndsAy() {
+		assertEquals("yttriaay", pig.translate("yttria"));
+	}
 }
