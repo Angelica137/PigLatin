@@ -4,6 +4,8 @@ public class PigLatin {
 		int i;
 		String temp = "";
 		Boolean qu = false;
+
+		// dictionary rules
 		for (i = 0; i < word.length(); i++) {
 			if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o'
 					|| word.charAt(i) == 'u') {
@@ -21,6 +23,8 @@ public class PigLatin {
 				temp += word.charAt(i);
 			}
 		}
+
+		// create word output
 		if (qu == false) {
 			word = word.substring(i);
 		} else {
@@ -29,16 +33,4 @@ public class PigLatin {
 		word = (word + temp + "ay");
 		return word;
 	}
-
-	// }
-
-	public static void main(String[] args) {
-		PigLatin pig;
-		pig = new PigLatin();
-		System.out.println(pig.translate("square"));
-		System.out.println(pig.translate("chair"));
-		System.out.println(pig.translate("my"));
-
-	}
-
 }
