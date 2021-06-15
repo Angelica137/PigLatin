@@ -16,7 +16,8 @@ public class PigLatin {
 			} else if (word.charAt(i) == 'q' && word.charAt(i + 1) == 'u') {
 				temp = temp + word.charAt(i) + word.charAt(i + 1);
 				qu = true;
-
+			} else if (i > 0 && word.charAt(i) == 'y') {
+				break;
 			} else {
 				temp += word.charAt(i);
 			}
@@ -37,6 +38,7 @@ public class PigLatin {
 		pig = new PigLatin();
 		System.out.println(pig.translate("square"));
 		System.out.println(pig.translate("chair"));
+		System.out.println(pig.translate("my"));
 
 	}
 

@@ -38,8 +38,8 @@ public class PigLatinTest {
 		assertEquals("aresquay", pig.translate("square"));
 	}
 
-	// @Test
-	// public void testYAfterConsonant() {
-	// assertEquals("ymay", pig.translate("my"));
-	// }
+	@Test
+	public void testYAfterConsonant() {
+		assertEquals("ymay", pig.translate("my"));
+	}
 }
