@@ -38,4 +38,9 @@ public class PigLatinTest {
 	public void testWordStartswisthConstantPlusQU() {
 		assertEquals("aresquay", pig.translate("square"));
 	}
+
+	@Test
+	public void testYAfterConsonant() {
+		assertEquals("ymay", pig.translate("my"));
+	}
 }
