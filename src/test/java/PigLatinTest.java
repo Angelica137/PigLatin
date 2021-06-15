@@ -14,7 +14,6 @@ public class PigLatinTest {
 		pig = new PigLatin();
 	}
 
-
 	@Test
 	public void testWordStartsWithVowelEndsAy() {
 		assertEquals("earay", pig.translate("ear"));
@@ -33,5 +32,10 @@ public class PigLatinTest {
 	@Test
 	public void testWordStartsWithConsonant() {
 		assertEquals("airchay", pig.translate("chair"));
+	}
+
+	@Test
+	public void testWordStartswisthConstantPlusQU() {
+		assertEquals("aresquay", pig.translate("square"));
 	}
 }
