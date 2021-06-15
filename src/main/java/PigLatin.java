@@ -9,18 +9,16 @@ public class PigLatin {
 		} else if (start == 'y' && start2 == 't') {
 			return (word + "ay");
 		} else {
-			char[] ch = word.toCharArray();
 			int i;
 			String temp = "";
 			for (i = 0; i < word.length(); i++) {
-				if (ch[i] == 'a' || ch[i] == 'e' || ch[i] == 'i' || ch[i] == 'o' || ch[i] == 'u') {
+				char ch = word.charAt(i);
+				if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
 					break;
 				} else {
-					temp += ch[i];
+					temp += word.charAt(i);
 				}
 			}
-			System.out.println("First print " + word);
-			System.out.println(temp);
 			String word2 = word.substring(i);
 			word = (word2 + temp + "ay");
 			return word;
