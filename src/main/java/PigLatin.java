@@ -1,35 +1,32 @@
 public class PigLatin {
 	public String translate(String word) {
 
-		// word starts with vowel
-		char start = word.charAt(0);
-		char start2 = word.charAt(1);
-
 		int i;
 		String temp = "";
-		String word2;
+		// String word2;
 		Boolean qu = false;
 		for (i = 0; i < word.length(); i++) {
-			char ch = word.charAt(i);
-			if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+			if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o'
+					|| word.charAt(i) == 'u') {
 				break;
-			} else if (ch == 'q' && word.charAt(i + 1) == 'u') {
-				temp = temp + ch + word.charAt(i + 1);
+			} else if (word.charAt(0) == 'x' && word.charAt(1) == 'r') {
+				return (word + "ay");
+			} else if (word.charAt(0) == 'y' && word.charAt(1) == 't') {
+				return (word + "ay");
+			} else if (word.charAt(i) == 'q' && word.charAt(i + 1) == 'u') {
+				temp = temp + word.charAt(i) + word.charAt(i + 1);
 				qu = true;
-			} else if (start == 'x' && start2 == 'r') {
-				return (word + "ay");
-			} else if (start == 'y' && start2 == 't') {
-				return (word + "ay");
+
 			} else {
-				temp += ch;
+				temp += word.charAt(i);
 			}
 		}
 		if (qu == false) {
-			word2 = word.substring(i);
+			word = word.substring(i);
 		} else {
-			word2 = word.substring((i + 1));
+			word = word.substring((i + 1));
 		}
-		word = (word2 + temp + "ay");
+		word = (word + temp + "ay");
 		return word;
 	}
 
