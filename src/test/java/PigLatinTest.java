@@ -42,4 +42,9 @@ public class PigLatinTest {
 	public void testYAfterConsonant() {
 		assertEquals("ymay", pig.translate("my"));
 	}
+
+	@Test
+	public void testConsonantClusterPlusY() {
+		assertEquals("ythmrhay", pig.translate("rhythm"));
+	}
 }
