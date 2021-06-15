@@ -3,7 +3,6 @@ public class PigLatin {
 
 		int i;
 		String temp = "";
-		// String word2;
 		Boolean qu = false;
 		for (i = 0; i < word.length(); i++) {
 			if (word.charAt(i) == 'a' || word.charAt(i) == 'e' || word.charAt(i) == 'i' || word.charAt(i) == 'o'
