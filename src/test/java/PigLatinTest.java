@@ -1,7 +1,6 @@
 
 //import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
-//import static org.junit.Assert.assertThrows;
 
 import org.junit.Test;
 import org.junit.Before;
@@ -39,8 +38,4 @@ public class PigLatinTest {
 		assertEquals("aresquay", pig.translate("square"));
 	}
 
-	@Test
-	public void testYAfterConsonant() {
-		assertEquals("ymay", pig.translate("my"));
-	}
 }
