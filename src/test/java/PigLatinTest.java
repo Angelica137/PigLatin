@@ -14,10 +14,6 @@ public class PigLatinTest {
 		pig = new PigLatin();
 	}
 
-	@Test
-	public void testPigLatinReturnsString() {
-		assertEquals("Hello", pig.translate("Hello"));
-	}
 
 	@Test
 	public void testWordStartsWithVowelEndsAy() {
